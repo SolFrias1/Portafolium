@@ -1,0 +1,6 @@
+.DS_Store
+_recursos_originales/
+*.zip
+*.mov
+node_modules/
+.venv/

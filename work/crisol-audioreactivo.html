@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Crisol Audioreactivo — Piedad — Victoria Sol Frías</title>
+  <meta name="description" content="Sistema visual audioreactivo en WebGL GLSL y Web Audio API sincronizado con Piedad de Camila Moreno (T05 DPPI).">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23490B0C'/><circle cx='16' cy='16' r='6' fill='%23A4BCD4'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/landing.css">
+  <link rel="stylesheet" href="../css/subpages.css">
+</head>
+<body class="subpage-body theme-ppi">
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a href="../index.html" class="nav-brand">Victoria Sol Frías</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="../index.html" class="nav-link">Inicio</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="index.html" class="nav-link" aria-current="page">Work</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button type="button" id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mobileDrawer">Menú [+]</button>
+    </div>
+  </header>
+
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú móvil">
+    <div class="mobile-drawer-top">
+      <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cerulean);">[T05 · CRISOL]</span>
+      <button type="button" id="closeDrawer" class="menu-toggle">Cerrar [×]</button>
+    </div>
+    <nav class="mobile-drawer-nav" aria-label="Navegación móvil">
+      <a href="../index.html">Inicio <span>00</span></a>
+      <a href="../about.html">About Me <span>01</span></a>
+      <a href="index.html">Work <span>07</span></a>
+      <a href="#contacto">Contacto <span>↗</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <div>vsfrias.go@gmail.com</div>
+      <div>@portf.frias · github.com/SolFrias1</div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" class="subpage-main">
+    <div class="wrap">
+      <div class="breadcrumb-bar">
+        <a href="index.html" class="breadcrumb-link">← Volver a Work</a>
+        <span>T05 · DPPI · 2026</span>
+      </div>
+
+      <header class="project-hero-header">
+        <div class="project-bg-word" aria-hidden="true">CRISOL</div>
+        <h1 class="project-page-title">
+          CRISOL AUDIOREACTIVO · <em>Piedad</em>
+        </h1>
+        <p class="project-lead-concept">
+          Exploración sobre la fragilidad, el calor y la transformación a través de una vela que se consume al ritmo de <em>Piedad</em> de Camila Moreno (álbum <em>Mala madre</em>), en formato vertical 9:16.
+        </p>
+
+        <div class="meta-strip">
+          <div class="meta-cell">
+            <span class="k">Año / Curso</span>
+            <span class="v">2026 · DPPI (Ejercicio 05)</span>
+          </div>
+          <div class="meta-cell">
+            <span class="k">Formato</span>
+            <span class="v">Vertical 9:16 (60 FPS)</span>
+          </div>
+          <div class="meta-cell">
+            <span class="k">Tecnologías</span>
+            <span class="v">WebGL GLSL · Web Audio FFT · Canvas 2D</span>
+          </div>
+          <div class="meta-cell">
+            <span class="k">Repositorio</span>
+            <span class="v">SolFrias1/vela-audioreactiva</span>
+          </div>
+        </div>
+
+        <div class="hero-actions-bar">
+          <a href="https://github.com/SolFrias1/vela-audioreactiva" target="_blank" rel="noopener noreferrer" class="on-band-btn solid">Repositorio GitHub ↗</a>
+        </div>
+      </header>
+
+      <!-- Video protagonista en formato vertical -->
+      <div class="project-hero-media" style="max-width:460px;margin-inline:auto;">
+        <div class="media-zoom-box" style="aspect-ratio:9/16;cursor:default;">
+          <video controls autoplay muted loop playsinline poster="../images/projects/crisol-hero.jpg" style="width:100%;height:100%;object-fit:cover;">
+            <source src="../videos/crisol-loop.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+
+      <div class="narrative-columns">
+        <article class="narrative-card">
+          <span class="tag">[01 · CONCEPTO Y DIRECCIÓN DE ARTE]</span>
+          <h2>Calor, pulso y <em>extinción</em></h2>
+          <p>
+            Cada golpe de bombo provoca aberración cromática (<em>RGB split</em>) y chispas incandescentes desde el núcleo de la llama, mientras ondas de calor (<em>heat shimmer</em>) licúan la cera al ritmo de la voz.
+          </p>
+          <p>
+            En los clímax vocales (segundos 25.8 y 172.3), la palabra «PIEDAD» emerge y se disuelve en el humo hasta que la vela colapsa hacia cenizas y escala de grises.
+          </p>
+        </article>
+
+        <article class="narrative-card">
+          <span class="tag">[02 · ARQUITECTURA TÉCNICA]</span>
+          <h2>Shaders GLSL y <em>Web Audio FFT</em></h2>
+          <ul>
+            <li><strong>WebGL Shaders:</strong> deformación orgánica mediante ruido fractal (<em>Value Noise</em>) y simulación convectiva de calor.</li>
+            <li><strong>Análisis Espectral:</strong> lectura FFT por bandas de graves, medios y agudos con detección dinámica de transitorios (<em>Flux</em>).</li>
+            <li><strong>Exportación integrada:</strong> grabadora nativa en tiempo real a 60 FPS y soporte multi-fuente arrastrando audio/video propio.</li>
+          </ul>
+        </article>
+      </div>
+
+      <section class="gallery-section" aria-label="Fotogramas de Crisol Audioreactivo">
+        <div class="gallery-header">
+          <h2>Fotogramas del <em>proceso</em></h2>
+          <span style="font-family:var(--font-mono);font-size:0.72rem;">Clic para ampliar completo</span>
+        </div>
+        <div class="masonry-gallery">
+          <div class="masonry-item">
+            <div class="media-zoom-box" data-gallery-zoom data-gallery-caption="Vista previa principal en formato vertical (2160×3840)" tabindex="0" role="button">
+              <img src="../images/projects/crisol-hero.jpg" alt="Vela iluminada en Crisol Audioreactivo">
+            </div>
+            <div class="masonry-caption">Vela en combustión con dispersión térmica y partículas</div>
+          </div>
+          <div class="masonry-item">
+            <div class="media-zoom-box" data-gallery-zoom data-gallery-caption="Fotograma segundo 20s · Respuesta espectral" tabindex="0" role="button">
+              <img src="../images/projects/crisol-frame.jpg" alt="Fotograma segundo 20 de Crisol Audioreactivo">
+            </div>
+            <div class="masonry-caption">Fotograma a los 20s · Pulso de frecuencias medias</div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="project-pager" aria-label="Navegación entre proyectos">
+        <a href="dos-realidades.html" class="pager-link">
+          <span class="dir">← Proyecto anterior</span>
+          <span class="name">Dos Realidades</span>
+        </a>
+        <a href="index.html" class="on-band-btn">Volver a Work</a>
+        <a href="bivalvia.html" class="pager-link next">
+          <span class="dir">Siguiente proyecto →</span>
+          <span class="name">BIVALVIA</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <div id="fullbleedLightbox" class="fullbleed-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <div class="lightbox-bar">
+      <span id="lightboxTitle">Imagen completa</span>
+      <button type="button" id="closeLightbox" class="pill-btn on-dark-ghost" style="padding:6px 14px;">Cerrar [Esc]</button>
+    </div>
+    <div class="lightbox-stage"><img id="lightboxImg" src="" alt=""></div>
+  </div>
+
+  <footer id="contacto" class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cerulean);text-transform:uppercase;letter-spacing:0.08em;">Contacto</span>
+          <h2 class="footer-title">Conversar y <em>colaborar</em></h2>
+          <p class="footer-lead">Archivo abierto de objetos, textiles y sistemas interactivos en proceso. Si algún cruce o idea resuena contigo, conversemos.</p>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:vsfrias.go@gmail.com" class="contact-row">
+            <div><span class="label">Correo</span><br><span>vsfrias.go@gmail.com</span></div>
+            <button type="button" class="copy-pill" data-copy="vsfrias.go@gmail.com">Copiar</button>
+          </a>
+          <a href="https://github.com/SolFrias1" target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div><span class="label">GitHub</span><br><span>github.com/SolFrias1</span></div>
+            <span>↗</span>
+          </a>
+          <a href="https://instagram.com/portf.frias" target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div><span class="label">Instagram</span><br><span>@portf.frias</span></div>
+            <span>↗</span>
+          </a>
+          <a href="tel:+56965352139" class="contact-row">
+            <div><span class="label">Teléfono</span><br><span>+56 9 6535 2139</span></div>
+            <span>CL</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Victoria Sol Frías · Diseño Industrial, UDP</span>
+        <span>Tipografías: Galgo (@bojjoe), Unique, Cormorant Garamond e IBM Plex</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/subpages.js"></script>
+</body>
+</html>

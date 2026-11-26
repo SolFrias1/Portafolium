@@ -1,0 +1,57 @@
+/* ==========================================================================
+   SISTEMA VISUAL & TIPOGRAFÍAS · PORTAFOLIO VICTORIA SOL FRÍAS
+   Fuentes: Galgo (Open Source), Unique (Commercial Allowed), Cormorant Garamond, IBM Plex Sans/Mono.
+   Sin fuentes de uso personal.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Unique';
+  src: url('../fonts/Unique-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unique';
+  src: url('../fonts/Unique-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Galgo';
+  src: url('../fonts/Galgo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --burgundy: #5A1D22;
+  --burgundy-deep: #490B0C;
+  --burgundy-bright: #671512;
+  --cerulean: #A4BCD4;
+  --cerulean-mist: #D8E5EE;
+  --cerulean-deep: #6E91B0;
+  --paper: #F4EFEB;
+  --paper-warm: #EDE4DA;
+  --cream-glow: #FFF8CA;
+  --cream-parcel: #F3E5C2;
+  --olive: #BFB065;
+  --ink: #1D120E;
+  --ink-muted: #523F38;
+
+  --font-graffiti: 'Unique', 'Galgo', sans-serif;
+  --font-condensed: 'Galgo', 'Unique', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --gutter: clamp(18px, 3.8vw, 56px);
+  --max-w: 1460px;
+
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+}

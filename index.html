@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Victoria Sol Frías — Portafolio · Diseño Industrial &amp; Interacción</title>
+  <meta name="description" content="Portafolio de Victoria Sol Frías, diseñadora en mención industrial explorando el cruce entre diseño físico (mobiliario, indumentaria) y experiencias interactivas.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23490B0C'/><circle cx='16' cy='16' r='6' fill='%23A4BCD4'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+  <a class="skip-link" href="#about-me">Saltar al contenido principal</a>
+
+  <!-- Cursor interactivo -->
+  <div id="cursorFollower" class="cursor-follower" aria-hidden="true">+ Ver</div>
+
+  <!-- CABECERA STICKY AL BAJAR -->
+  <header id="siteHeader" class="site-header">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="nav-brand">Victoria Sol Frías</a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#haloRoot" class="nav-link" aria-current="page">Inicio</a>
+        <a href="#about-me" class="nav-link">About</a>
+        <a href="#proyectos-ppi" class="nav-link">Interacción</a>
+        <a href="#indumentaria" class="nav-link">Indumentaria</a>
+        <a href="#industrial" class="nav-link">Industrial</a>
+        <a href="#reflexion" class="nav-link">Reflexión</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <button
+        type="button"
+        id="menuToggle"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+        aria-label="Abrir menú"
+      >
+        Menú [+]
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú móvil">
+    <div class="mobile-drawer-top">
+      <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cerulean);">[VSF · PORTAFOLIO]</span>
+      <button type="button" id="closeDrawer" class="menu-toggle">Cerrar [×]</button>
+    </div>
+
+    <nav class="mobile-drawer-nav" aria-label="Navegación móvil">
+      <a href="#haloRoot">Órbita 3D <span>00</span></a>
+      <a href="#about-me">About Me <span>01</span></a>
+      <a href="#proyectos-ppi">Interacción <span>02</span></a>
+      <a href="#indumentaria">Indumentaria <span>03</span></a>
+      <a href="#industrial">Industrial <span>04</span></a>
+      <a href="#reflexion">Reflexión <span>05</span></a>
+      <a href="#contacto">Contacto <span>↗</span></a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <div>vsfrias.go@gmail.com</div>
+      <div>@portf.frias · github.com/SolFrias1</div>
+    </div>
+  </div>
+
+  <main id="contenido-principal">
+    <!-- 00 · HALO RING 3D HERO (ARRASTRABLE + CÁMARA EN PICADA + ODÓMETRO) -->
+    <section id="haloRoot" class="hrh-root" aria-label="Portada interactiva 3D">
+      <div id="hrhScene" class="hrh-scene" aria-hidden="true">
+        <div id="hrhSky" class="hrh-sky"></div>
+        <div id="hrhCover" class="hrh-cover"></div>
+        <canvas id="hrhCanvas" class="hrh-canvas"></canvas>
+      </div>
+
+      <div class="hrh-ui">
+        <h1 id="hrhMark" class="hrh-mark" aria-label="Victoria Sol Frías.">
+          <span aria-hidden="true"><i data-l="">V</i></span><span aria-hidden="true"><i data-l="">i</i></span><span aria-hidden="true"><i data-l="">c</i></span><span aria-hidden="true"><i data-l="">t</i></span><span aria-hidden="true"><i data-l="">o</i></span><span aria-hidden="true"><i data-l="">r</i></span><span aria-hidden="true"><i data-l="">i</i></span><span aria-hidden="true"><i data-l="">a</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">&nbsp;</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">S</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">o</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">l</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">&nbsp;</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">F</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">r</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">í</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">a</i></span><span aria-hidden="true" style="max-width:0"><i data-x="" style="transform:translateY(110%)">s</i></span><span aria-hidden="true"><i data-l="">.</i></span>
+        </h1>
+
+        <div id="hrhCount" class="hrh-count" aria-hidden="true" style="opacity:0">
+          <small>Cargando archivo</small>
+          <span class="hrh-digits">
+            <span class="hrh-col"><b data-c=""><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>0</i></b></span>
+            <span class="hrh-col"><b data-c=""><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>0</i></b></span>
+            <span class="hrh-col"><b data-c=""><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>0</i></b></span>
+            <span class="hrh-pct">%</span>
+          </span>
+        </div>
+
+        <nav id="hrhNav" class="hrh-nav" aria-label="Navegación inicial">
+          <div class="hrh-links">
+            <a href="#about-me" data-n="" style="visibility:hidden">About</a>
+            <a href="#proyectos-ppi" data-n="" style="visibility:hidden">Interacción</a>
+            <a href="#indumentaria" data-n="" style="visibility:hidden">Indumentaria</a>
+            <a href="#industrial" data-n="" style="visibility:hidden">Industrial</a>
+            <a href="#reflexion" data-n="" style="visibility:hidden">Reflexión</a>
+            <a href="#contacto" data-n="" style="visibility:hidden">Contacto</a>
+          </div>
+          <button type="button" id="hrhReplay" data-n="" style="visibility:hidden">Replay ↺</button>
+        </nav>
+
+        <div id="hrhWordRise" class="hrh-portafolio-rise" aria-hidden="true">PORTAFOLIO</div>
+
+        <div id="hrhBar" class="hrh-bar">
+          <p class="hrh-head">
+            <span class="hrh-line">
+              <span data-line="" style="transform:translateY(105%)">
+                <a href="#about-me" class="hrh-u" data-u="">About<sup>↗</sup></a> · <a href="#proyectos-ppi" class="hrh-u" data-u="">Interacción<sup>↗</sup></a>
+              </span>
+            </span>
+            <span class="hrh-line">
+              <span data-line="" style="transform:translateY(105%)">
+                <a href="#indumentaria" class="hrh-u" data-u="">Indumentaria<sup>↗</sup></a> · <a href="#industrial" class="hrh-u" data-u="">Industrial<sup>↗</sup></a>
+              </span>
+            </span>
+          </p>
+
+          <div class="hrh-stats">
+            <div class="hrh-stat" data-s="" style="opacity:0">
+              <b>0</b>
+              <small>Proyectos</small>
+            </div>
+            <div class="hrh-stat" data-s="" style="opacity:0">
+              <b>0</b>
+              <small>Disciplinas</small>
+            </div>
+            <div class="hrh-stat" data-s="" style="opacity:0">
+              <b>0</b>
+              <small>Archivo</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 · ABOUT ME (FONDO CELESTE) -->
+    <section id="about-me" class="color-band band-about" aria-labelledby="about-heading">
+      <div class="wrap">
+        <div class="section-backdrop-header">
+          <h2 id="about-heading" class="backdrop-bounce-title" data-bounce="left">ABOUT ME</h2>
+          <div class="section-sub-row">
+            <p class="section-clean-sub">Victoria Sol Frías · Diseño Industrial (UDP)</p>
+            <a href="about.html" class="on-band-btn">Perfil extendido →</a>
+          </div>
+        </div>
+
+        <div class="about-roll-grid">
+          <div class="about-portrait-card" data-parallax="-0.04">
+            <div class="about-portrait-frame" data-clip-reveal>
+              <img src="images/yo.png" alt="Retrato de Victoria Sol Frías">
+            </div>
+          </div>
+
+          <div class="about-text-stack" data-parallax="0.03">
+            <p class="about-lead-strong">
+              Diseñadora (ya casi) en mención industrial explorando en el cruce entre el diseño físico (mobiliaria, indumentaria) y el desarrollo de las experiencias interactivas (programación creativa, sonido, e imágenes).
+            </p>
+            <p>
+              Este portafolio reúne una selección de proyectos y exploraciones que reflejan parte de mi proceso, intereses y manera de aproximarme al diseño. Es también un espacio en constante construcción, donde registro y registraré lo que hago, lo que descubro y aquello que todavía quiero seguir explorando.
+            </p>
+          </div>
+        </div>
+
+        <div class="figma-quad-row">
+          <div class="figma-quad-box">
+            <span class="quad-vertical-bg" aria-hidden="true">FÍSICA</span>
+            <span class="num">01/</span>
+            <span class="lbl">Diseño físico, mobiliario e indumentaria</span>
+          </div>
+          <div class="figma-quad-box">
+            <span class="quad-vertical-bg" aria-hidden="true">CÓDIGO</span>
+            <span class="num">02/</span>
+            <span class="lbl">Programación creativa e interacción</span>
+          </div>
+          <div class="figma-quad-box">
+            <span class="quad-vertical-bg" aria-hidden="true">SONIDO</span>
+            <span class="num">03/</span>
+            <span class="lbl">Sonificación, escucha y paisaje acústico</span>
+          </div>
+          <div class="figma-quad-box">
+            <span class="quad-vertical-bg" aria-hidden="true">IMAGEN</span>
+            <span class="num">04/</span>
+            <span class="lbl">Percepción visual, shaders y espacio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · INTERACCIÓN · DPPI (FONDO CAFÉ OSCURO) -->
+    <section id="proyectos-ppi" class="color-band band-ppi" aria-labelledby="ppi-heading">
+      <div class="wrap">
+        <div class="section-backdrop-header">
+          <h2 id="ppi-heading" class="backdrop-bounce-title" data-bounce="right">INTERACCIÓN</h2>
+          <div class="section-sub-row">
+            <p class="section-clean-sub">Proyectos del curso · DPPI</p>
+            <span class="section-clean-sub" style="color:var(--cerulean);">T03 · T05 · T06 · T07</span>
+          </div>
+        </div>
+
+        <div id="ppiShowcaseList" class="roll-projects-list"></div>
+      </div>
+    </section>
+
+    <!-- 03 · INDUMENTARIA (FONDO VERDE OLIVA) -->
+    <section id="indumentaria" class="color-band band-indumentaria" aria-labelledby="indumentaria-heading">
+      <div class="wrap">
+        <div class="section-backdrop-header">
+          <h2 id="indumentaria-heading" class="backdrop-bounce-title" data-bounce="left">INDUMENTARIA</h2>
+          <div class="section-sub-row">
+            <p class="section-clean-sub">Superficies textiles y moda sostenible</p>
+            <span class="section-clean-sub">BIVALVIA · VESTIDO YARA</span>
+          </div>
+        </div>
+
+        <div id="indumentariaShowcaseList" class="roll-projects-list"></div>
+      </div>
+    </section>
+
+    <!-- 04 · INDUSTRIAL Y ESPACIO (FONDO BURDEO) -->
+    <section id="industrial" class="color-band band-industrial" aria-labelledby="industrial-heading">
+      <div class="wrap">
+        <div class="section-backdrop-header">
+          <h2 id="industrial-heading" class="backdrop-bounce-title" data-bounce="right">INDUSTRIAL</h2>
+          <div class="section-sub-row">
+            <p class="section-clean-sub">Mobiliario y entorno natural</p>
+            <span class="section-clean-sub" style="color:var(--cerulean);">TALLER LOCAL · POSTMOB</span>
+          </div>
+        </div>
+
+        <div id="industrialShowcaseList" class="roll-projects-list"></div>
+      </div>
+    </section>
+
+    <!-- 05 · REFLEXIÓN PERSONAL + FIRMA DIGITAL ABAJO A LA DERECHA (FONDO CREMA) -->
+    <section id="reflexion" class="color-band band-reflection" style="border-bottom:0;" aria-labelledby="reflection-heading">
+      <div class="wrap">
+        <div class="section-backdrop-header">
+          <h2 id="reflection-heading" class="backdrop-bounce-title" data-bounce="left">REFLEXIÓN</h2>
+          <div class="section-sub-row">
+            <p class="section-clean-sub">Mirada en construcción</p>
+          </div>
+        </div>
+
+        <div class="reflection-grid">
+          <div>
+            <p class="section-clean-sub" style="color:var(--burgundy);">
+              Registro de transformaciones · 2023—2026
+            </p>
+          </div>
+
+          <div class="reflection-prose">
+            <p>
+              Al mirar este recorrido, junto a estos proyectos en conjunto, distingo un interés por experimentar con aquello que no siempre resulta evidente: ¿Qué son las huellas que deja un movimiento, los sonidos que transforman un espacio, las respuestas inesperadas de una interacción o las distintas realidades que pueden construirse a partir de una misma información? Para mi fueron juegos de estrés, colores y cuestionamientos.
+            </p>
+            <p>
+              A lo largo del proceso he podido acercarme a distintas formas de cuestionar y hacer diseño, descubrir nuevos intereses y enfrentar desafíos que me llevaron a salir de mis propias ideas iniciales. No todos los proyectos llegaron a una respuesta final; ni todas las exploraciones terminaron convertidas en una solución. Sin embargo, cada una me permitió abrir nuevas preguntas y ampliar mi manera de abordar el diseño.
+            </p>
+            <p>
+              Hoy entiendo este portafolio como un registro de esas transformaciones, más que una colección de resultados; de las ideas que aparecieron, las decisiones que cambiaron y las posibilidades que surgieron al experimentar en ámbitos desconocidos para mi.
+            </p>
+            <p>
+              Me quedo con la curiosidad de seguir explorando, cuestionando y encontrando nuevas formas de crear, junto a los intereses que comienzan a tomar forma y las distintas maneras en que puedo abordar una idea
+            </p>
+            <p class="reflection-closing">
+              Este portafolio es una mirada en construcción, de mi para ti.
+            </p>
+          </div>
+        </div>
+
+        <div class="signature-corner-row" data-clip-reveal>
+          <img src="images/sol-frias-firma.png" alt="Firma digital de Sol Frías" class="final-signature-img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX FULL-SCREEN CON DETALLE -->
+  <div id="fullbleedLightbox" class="fullbleed-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+    <div class="lightbox-bar">
+      <span id="lightboxTitle">Imagen completa</span>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="toggleDetailBtn" class="pill-btn on-dark-ghost" style="padding:6px 14px;" hidden>
+          Ver detalle ↔
+        </button>
+        <button type="button" id="closeLightbox" class="pill-btn on-dark-ghost" style="padding:6px 14px;">
+          Cerrar [Esc]
+        </button>
+      </div>
+    </div>
+    <div class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </div>
+
+  <!-- FOOTER OSCURO -->
+  <footer id="contacto" class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cerulean);text-transform:uppercase;letter-spacing:0.08em;">04 · Contacto</span>
+          <h2 class="footer-title">
+            Conversar y <em>colaborar</em>
+          </h2>
+          <p class="footer-lead">
+            Archivo abierto de objetos, textiles y sistemas interactivos en proceso. Si algún cruce o idea resuena contigo, conversemos.
+          </p>
+        </div>
+
+        <div class="contact-list">
+          <a href="mailto:vsfrias.go@gmail.com" class="contact-row">
+            <div>
+              <span class="label">Correo</span><br>
+              <span>vsfrias.go@gmail.com</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="vsfrias.go@gmail.com">Copiar</button>
+          </a>
+          <a href="https://github.com/SolFrias1" target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div>
+              <span class="label">GitHub</span><br>
+              <span>github.com/SolFrias1</span>
+            </div>
+            <span>↗</span>
+          </a>
+          <a href="https://instagram.com/portf.frias" target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div>
+              <span class="label">Instagram</span><br>
+              <span>@portf.frias</span>
+            </div>
+            <span>↗</span>
+          </a>
+          <a href="tel:+56965352139" class="contact-row">
+            <div>
+              <span class="label">Teléfono</span><br>
+              <span>+56 9 6535 2139</span>
+            </div>
+            <span>CL</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Victoria Sol Frías · Diseño Industrial, UDP</span>
+        <span>Componente 3D: Halo Ring Hero (21st.dev/@kedhareswer) · Tipografías: Galgo (@bojjoe), Unique, Cormorant Garamond e IBM Plex</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script type="module" src="js/halo-hero.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
